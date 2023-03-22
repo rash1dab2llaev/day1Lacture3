@@ -154,19 +154,96 @@ function findNemo(str) {
 findNemo('Nemo I am finding Nmo') */
 
 
-function vowels(str) {
+/*19 function vowels(str) {
     let vovels = 'aeiouyw'
     let vowelsArr = vovels.split('')
     let strArr = str.split('')
     let k = 0
     for (let i = 0; i < strArr.length; i++) {
         for (let j = 0; j < vowelsArr.length; j++) {
-            if (str[i] == vowelsArr[j]) {
+            if (str[i].toLowerCase() == vowelsArr[j]) {
                 k++
             }
         }
-        console.log(k);
     }
     console.log(k);
 }
 vowels('Celebration')
+vowels('palms')
+vowels('Prediction') */
+
+/* 20
+function potatoes(str) {
+    let k 
+    let cnt=0
+    k = str.replaceAll('potatoes', 1)
+
+    for (let i = 0; i < k.length; i++) {
+        cnt++
+    }
+    console.log(cnt);
+    
+}
+potatoes('potatoespotatoespotatoes')
+ */
+
+/*21 function firstChildUp(str) {
+    let arrStr = str.split(' ')
+    for (let i = 0; i < arrStr.length; i++) {
+        console.log(arrStr[i].charAt(0).toUpperCase()+arrStr[i].slice(1))
+    }
+}
+firstChildUp('hello world')
+firstChildUp('HELLO WORLD') */
+/* 22
+function dashed(str) {
+    let arrStr = str.split('')
+    console.log(arrStr.join('-',));
+}
+dashed('edabit dsa') */
+
+
+
+//HOME TASK1
+
+/*1 function reverseLastWord(str) {
+    let arrStr = str.split(' ')
+    let lastChild = arrStr.slice(arrStr.length - 1)
+    let newStr = ''
+
+    for (let i = 0; i < arrStr.length - 1; i++) {
+        newStr += ' ' + arrStr[i]
+    }
+    console.log(lastChild + newStr);
+}
+reverseLastWord('hello every body')
+ */
+
+
+/* 2
+function upToLow(str) {
+    let upp = ''
+    let low = ''
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == str[i].toUpperCase()) {
+            upp += str[i]
+        }
+        if (str[i] == str[i].toLowerCase()) {
+            low += str[i]
+        }
+    }
+    console.log(upp+low);
+}
+
+upToLow('APPle')
+upToLow('AppLe') */
+
+
+function repeatChild(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i]==str[i]) {
+            console.log(str[i]);
+        }
+    }
+}
+repeatChild('hello')

@@ -238,12 +238,31 @@ function upToLow(str) {
 upToLow('APPle')
 upToLow('AppLe') */
 
+/* 3
+function repeatOdd(str) {
+    let arrStr = str.split(' ')
+    let newStr = ''
+    for (let i = 0; i < arrStr.length; i++) {
+        if (arrStr[i].length % 2 == 0) {
+            newStr += arrStr[i]+' '
+        } else {
+            newStr += arrStr[i].split('').reverse().join('')+' '
+        }
+    }
+    console.log(newStr);
+
+}
+repeatOdd('hello hell hel he') */
+
 
 function repeatChild(str) {
     for (let i = 0; i < str.length; i++) {
-        if (str[i]==str[i]) {
-            console.log(str[i]);
+        for (let j = i + 1; j < str.length; j++) {
+            if (str[i] == str[j]) {
+                return str[i]
+            }
         }
     }
+    return -1
 }
-repeatChild('hello')
+console.log(repeatChild('ala'));
